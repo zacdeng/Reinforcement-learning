@@ -61,6 +61,18 @@ If you would like to re-run a previously interrupted or completed training run a
 mlagents-learn <trainer-config-file> --env=<env_name> --run-id=<run-identifier> --force
 ```
 
+#### Embedding the model into the Unity Environment
+
+以`3D Ball`场景为示例演示一下怎么使用自己训练好的model
+
+1. Move your model file into
+   `Project/Assets/ML-Agents/Examples/3DBall/TFModels/`.
+1. Open the Unity Editor, and select the **3DBall** scene as described above.
+1. Select the **3DBall** prefab Agent object.
+1. Drag the `<behavior_name>.onnx` file from the Project window of the Editor to
+   the **Model** placeholder in the **Ball3DAgent** inspector window.
+1. Press the **Play** button at the top of the Editor.
+
 
 
 ---
